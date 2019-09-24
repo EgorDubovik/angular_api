@@ -1,0 +1,16 @@
+<div class="container">
+	<div class="card mx-auto mt-5" style="max-width: 400px;">
+		<div class="card-header">Code</div>
+		<div class="card-body">
+			<form method="post" (submit)="submitCode($event,code)">
+				<div class="form-group">
+					<label for="code">Code</label>
+					<input type="text" name="code" id="code" #code class="form-control">
+				</div>
+				<div class="form-group">
+					<button class="btn btn-primary btn-block" type="submit">Send</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
