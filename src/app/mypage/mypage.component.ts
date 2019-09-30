@@ -15,15 +15,14 @@ export class MypageComponent implements OnInit {
 	headers: HttpHeaders = new HttpHeaders();
 	constructor(private http: HttpClient, private cookieService: CookieService) { 
 		this.token = this.cookieService.get('token');
-		// this.headers = this.headers.append('Authorization', 'Bearer '+this.token);
-		// this.headers = this.headers.append('Content-Type', 'application/json');
+		this.headers = this.headers.append('Authorization', 'Bearer '+this.token);
+		this.headers = this.headers.append('Content-Type', 'application/json');
 	}
 
 	ngOnInit() {
-		console.log(this.token);
-		this.http.get("http://povar.loc/api/getUserr", { headers: this.headers})
+		this.http.get("http://povar.loc/api/getUser", { headers: this.headers})
 		.subscribe((response)=>{
-			//console.log(response);
+			console.log(response);
 		});
 	}
 
