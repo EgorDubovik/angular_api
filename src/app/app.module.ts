@@ -7,10 +7,15 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { IndexComponent } from './index/index.component';
 import { CodeComponent } from './code/code.component';
+import { StateService } from './state.service';
+import { CookieService } from 'ngx-cookie-service';
+import { ChwhyComponent } from './chwhy/chwhy.component';
+import { MypageComponent } from './mypage/mypage.component';
 
 const appRoutes : Routes = [
 	{path : 'login', component:LoginComponent},
   {path : 'code', component:CodeComponent},
+  {path : "mypage", component:MypageComponent},
   {path : '', component:IndexComponent},
 ];
 
@@ -19,14 +24,19 @@ const appRoutes : Routes = [
     AppComponent,
     LoginComponent,
     IndexComponent,
-    CodeComponent
+    CodeComponent,
+    ChwhyComponent,
+    MypageComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    StateService,
+    CookieService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
