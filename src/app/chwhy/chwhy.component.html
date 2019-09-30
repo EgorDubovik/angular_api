@@ -1,1 +1,23 @@
-<p>chwhy works!</p>
+<div class="container">
+	<div class="card mx-auto mt-5" style="width: 400px">
+		<div class="card-header">Who are you?</div>
+		<div class="card-body">
+			<form method="post" #who (submit) = saveTypeUser($event,who)>
+				<div class="custom-control custom-radio form-group">
+					<input type="radio" name="who" id="first" class="custom-control-input" value="2">
+					<label for='first' class="custom-control-label">I am hungry</label>
+				</div>
+				<div class="custom-control custom-radio form-group">
+					<input type="radio" name="who" id="second" checked="checked" class="custom-control-input" value="1">
+					<label for='second' class="custom-control-label">I am povar</label>
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary btn-block">
+						<span class="spinner-border spinner-border-sm" style="display: none" role="status" aria-hidden="true"></span>
+					save</button>
+				</div>
+			</form>
+		</div>
+	
+	</div>
+</div>

@@ -3,7 +3,7 @@ import { StateService } from '../state.service';
 import { HttpClient } from "@angular/common/http";
 import { HttpParams } from "@angular/common/http";
 import { CookieService } from 'ngx-cookie-service';
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-code',
   templateUrl: './code.component.html',

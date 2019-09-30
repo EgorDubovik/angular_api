@@ -16,6 +16,7 @@ const appRoutes : Routes = [
 	{path : 'login', component:LoginComponent},
   {path : 'code', component:CodeComponent},
   {path : "mypage", component:MypageComponent},
+  {path : "chwhy", component:ChwhyComponent},
   {path : '', component:IndexComponent},
 ];
 
